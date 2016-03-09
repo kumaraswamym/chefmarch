@@ -1,0 +1,1 @@
+default["welcome"]["author"] = "Galaxy"
