@@ -6,9 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-execute "rm /etc/welcome" do
-  only_if do
-      File.exist?("/etc/welcome")
-    end
+ file "/etc/welcome" do
+   content "hello chef"
+   mode "0644"
 end 
-  

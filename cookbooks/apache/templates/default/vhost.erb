@@ -1,0 +1,16 @@
+#virtual host template file
+ <VirtualHost *:<%= @port %> >
+    ServerName <%= @domain %>
+    DocumentRoot <%= @document_root %>
+  
+   <Directory />
+     Options Followsymlinks
+    AllowOverride None
+  </Directory>
+  <Directory <%= @document_root %> >
+     Options Indexes FollowSymlinks Multiviews
+     AllowOverride None
+     Order allow,deny
+     allow from all
+  </Directory>
+</VirtualHost>
